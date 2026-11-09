@@ -1,0 +1,65 @@
+{
+  "name": "bb-plugin-machine-load",
+  "version": "0.1.0",
+  "description": "bb plugin: monitor CPU, RAM, GPU, network and disk IO of every bb machine on shared time-series charts with 7-day history.",
+  "license": "MIT",
+  "author": "artgas1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artgas1/bb-plugin-machine-load.git"
+  },
+  "homepage": "https://github.com/artgas1/bb-plugin-machine-load#readme",
+  "keywords": [
+    "bb",
+    "bb-plugin",
+    "getbb",
+    "system-monitor",
+    "hardware-monitoring",
+    "cpu-usage",
+    "gpu-usage",
+    "memory-usage",
+    "network-monitor",
+    "disk-io",
+    "resource-monitor",
+    "multi-machine",
+    "apple-silicon",
+    "intel-gpu",
+    "nvidia",
+    "macmon",
+    "dashboard",
+    "time-series"
+  ],
+  "type": "module",
+  "engines": {
+    "bb": ">=0.49",
+    "bbPluginSdk": ">=0.6.132"
+  },
+  "bb": {
+    "name": "Machine Load",
+    "description": "Live CPU, memory, GPU, network and disk load of every bb machine on one timeline.",
+    "branding": {
+      "icon": "./assets/icon.svg",
+      "experimental_icons": {
+        "pulse": "./assets/icon.svg"
+      }
+    },
+    "server": "./server.ts",
+    "host": "./host.ts",
+    "app": "./app.tsx"
+  },
+  "dependencies": {
+    "@get-bb/plugin-sdk": "0.6.132",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "better-sqlite3": "^12.0.0",
+    "clsx": "^2.1.1",
+    "hono": "^4.11.9",
+    "tailwind-merge": "^3.7.0",
+    "typescript": "^5.7.0"
+  }
+}
